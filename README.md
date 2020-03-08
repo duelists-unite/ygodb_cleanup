@@ -1,8 +1,10 @@
 # ygodb_cleanup
 
+There are two files - LessAux.txt and LessStrs.txt. The LessAux.txt means scripts that have less aux.Stringid calls than the number of strs in the database. These cases are less priority because having extra or unused strs in the database doesn't do anything. It's only bad if that extra str is causing a shift of the indices of those strs. The LessStrs.txt is much more important as this is what leads to missing strings in the client when the script is referencing them.
+
 To submit any string corrections, first tell us on discord, which cards you will be working on so we can split the work. This project will take a while, but once its complete, it will be the most accurate database. Submit a cdb with the number range you did. For example, I am doing the first 100 cards, so my cdb will be cards_1-100.cdb. This contains only the text table. You will also need to look at the corresponding script to understand what effect is being referenced.
 
-As an example, open the c39015.lua. This is the first card listed in StrToFix.txt.
+As an example, open the c39015.lua. 
 
 It says "1) 39015 has 3 strs and 2 auxes calls"
 
